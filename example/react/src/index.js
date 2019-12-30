@@ -2,17 +2,25 @@ import React, {Fragment} from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route} from "react-router-dom";
 import Button from '@material-ui/core/Button';
+import { SnackbarProvider } from 'notistack';
 import history from "../../../lib/react/history";
 import LoginForm from "../../../lib/react/LoginForm";
-import {logout, logoutAll} from "../../../lib/react/client";
+import {logout, logoutAll, useUser} from "../../../lib/react/client";
 
-ReactDOM.render(<Fragment>
-    <Router history={history}>
-        <Button onClick={logout}>Выйти</Button>
-        <Button onClick={logoutAll}>Выйти со всех устройств</Button>
-        <Route path="/login">
-            <LoginForm/>
-        </Route>
-    </Router>
+function App() {
+    const user = useUser() || {};
+    return <Fragment>
+        <Router history={history}>
+            <SnackbarProvider maxSnack={3}>
+                {user.username}
+                <Button onClick={logout}>Выйти</Button>
+                <Button onClick={logoutAll}>Выйти со всех устройств</Button>
+                <Route path="/login">
+                    <LoginForm/>
+                </Route>
+            </SnackbarProvider>
+        </Router>
+    </Fragment>
+}
 
-</Fragment>, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
