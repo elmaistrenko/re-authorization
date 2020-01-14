@@ -1,5 +1,8 @@
 # Changelog
 All important changes are included in this file
+## 1.4.0 - 14.01.2020
+### Added
+- util to connect to WebSocket
 ## 1.3.0 - 13.01.2020
 ### Added
 - Openapi utils
