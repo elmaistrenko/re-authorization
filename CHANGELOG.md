@@ -1,5 +1,8 @@
 # Changelog
 All important changes are included in this file
+## 1.5.0 - 14.01.2020
+### Added
+- passing url to request and ws as object with properties pathname, and query object
 ## 1.4.0 - 14.01.2020
 ### Added
 - util to connect to WebSocket
