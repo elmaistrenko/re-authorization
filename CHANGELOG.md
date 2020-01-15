@@ -1,5 +1,8 @@
 # Changelog
 All important changes are included in this file
+## 1.5.1 - 15.01.2020
+### Fixed
+- recursive stringify query params
 ## 1.5.0 - 14.01.2020
 ### Added
 - passing url to request and ws as object with properties pathname, and query object
