@@ -8,7 +8,7 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                // exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
                     options: {
@@ -23,7 +23,7 @@ module.exports = {
             template: path.join(__dirname, "/public/index.html"),
         }),
         new webpack.DefinePlugin({
-            'process.env.REACT_APP_BASE': JSON.stringify('http://localhost:3000'),
+            'process.env.REACT_APP_BASE': JSON.stringify('http://192.168.7.70:3000'),
         }),
     ]
 };
