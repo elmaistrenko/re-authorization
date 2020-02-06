@@ -34,7 +34,7 @@
     "ws": "^7.2.1"
   },
   "scripts": {
-    "react-example": "./node_modules/.bin/webpack-dev-server --mode development --open --hot --config ./example/react/webpack.config.js --host 0.0.0.0"
+    "react-example": "./node_modules/.bin/webpack-dev-server --mode development --open --hot --config ./example/react/webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",

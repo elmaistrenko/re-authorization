@@ -26,7 +26,7 @@ const wss = new WebSocket.Server({
 const callbacks = [];
 
 const {wrapped, destroy, isDestroyed} = wrapper({
-    url: 'mongodb://localhost:28025',
+    url: 'mongodb://faces.vc:28025',
     onError: console.log,
     clientOptions: {
         replicaSet: 'rs',
